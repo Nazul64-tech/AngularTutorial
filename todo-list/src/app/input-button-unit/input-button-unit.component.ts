@@ -11,12 +11,9 @@ export class InputButtonUnitComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.title = 'Timer Title'
-    }, 3000);
   }
 
-  generateTitle(): string {
-    return 'Method Generated Title';
+  changeTitle(newTitle: string): void {
+    this.title = newTitle;
   }
 }
