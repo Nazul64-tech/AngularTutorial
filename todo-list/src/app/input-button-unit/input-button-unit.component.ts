@@ -13,7 +13,7 @@ export class InputButtonUnitComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeTitle(newTitle: string): void {
-    this.title = newTitle;
+  changeTitle(inputElementReference: string): void {
+    this.title = inputElementReference;
   }
 }
