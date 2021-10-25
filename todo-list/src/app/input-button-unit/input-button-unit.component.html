@@ -1,7 +1,7 @@
 <input #inputElementRef
        [value]="title"
-       (keyup.enter)="changeTitle($any($event.target).value)">
+       (keyup.enter)="submitValue($any($event.target).value)">
 
-<button (click)="changeTitle(inputElementRef.value)">
+<button (click)="submitValue(inputElementRef.value)">
   Save
 </button>
