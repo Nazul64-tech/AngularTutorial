@@ -1,8 +1,8 @@
 <div class="todo-app">
     <app-input-button-unit (submit)='addItem($event)'></app-input-button-unit>
 
-    <ul>
-        <li *ngFor="let todoItem of todoList">
+    <ul *ngIf="todoList | async as todoItems">
+        <li *ngFor="let todoItem of todoItems">
             <app-todo-item [item]="todoItem"
                             (remove)="removeItem($event)"
                             (update)="updateItem($event.item, $event.changes)"> </app-todo-item>
